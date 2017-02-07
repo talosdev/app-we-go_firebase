@@ -62,7 +62,7 @@ public abstract class AbstractPagingHelper<T, S> implements PagingHelper<T>{
             public List<T> call(List<T> list) {
                 if (list.size() > 0) {
                     criticalValue = extractCriticalValue(list.get(list.size() - 1));
-                    if (list.size() > 1) { // greater than 1, rather than 0, because otherwise we would
+                    if (list.size() > 1 ) { // greater than 1, rather than 0, because otherwise we would
                                            //  never end up showing the last element (it would always
                                            // get left out as the extra - critical value one
                         list.remove(list.size() - 1);
